@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack && electron .",
-    "packager": "electron-packager ./app --out=./packager --overwrite --icon=./app/icon/icon.*"
+    "packager": "electron-packager ./app --out=./packager --overwrite --icon=./app/icons/icon.*"    //icon图片大小 96*96
   },
   "dependencies": {
     "axios": "^0.17.0",
