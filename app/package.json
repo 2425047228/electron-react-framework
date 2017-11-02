@@ -1,0 +1,14 @@
+{
+  "name": "MyProject",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "git@github.com:2425047228/MyProject.git",
+  "author": "yangshuaiWithCompany <go.xlv@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "md5": "^2.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}

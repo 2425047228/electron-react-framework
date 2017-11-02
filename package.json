@@ -5,6 +5,10 @@
   "repository": "git@github.com:2425047228/MyProject.git",
   "author": "yangshuaiWithCompany <go.xlv@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack && electron .",
+    "packager": "electron-packager ./app --out=./packager --overwrite --icon=./app/icon/icon.*"
+  },
   "dependencies": {
     "axios": "^0.17.0",
     "md5": "^2.2.1",
