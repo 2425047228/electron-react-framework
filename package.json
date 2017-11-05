@@ -1,32 +1,31 @@
 {
-  "name": "MyProject",
+  "name": "electron-react-framework",
   "version": "1.0.0",
   "main": "app/main.js",
-  "repository": "git@github.com:2425047228/MyProject.git",
-  "author": "yangshuaiWithCompany <go.xlv@qq.com>",
-  "license": "MIT",
   "scripts": {
     "start": "webpack && electron .",
-    "packager": "electron-packager ./app --out=./packager --overwrite --icon=./app/icons/icon.*"    //icon图片大小 96*96
+    "packager": "electron-packager ./app --out=./packager --overwrite --icon=./app/icon/icon.*"
   },
-  "dependencies": {
-    "axios": "^0.17.0",
-    "md5": "^2.2.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
+  "repository": "git@github.com:2425047228/electron-react-framework.git",
+  "author": "yangshuaiWithCompany <go.xlv@qq.com>",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "6",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
     "electron": "^1.7.9",
     "electron-packager": "^9.1.0",
-    "file-loader": "^1.1.5",
     "style-loader": "^0.19.0",
-    "url-loader": "^0.6.2",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.0",
+    "md5": "^2.2.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0"
   }
 }
