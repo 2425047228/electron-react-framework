@@ -1,5 +1,4 @@
 .idea
 node_modules
 packager
-src/api.js
 yarn-error.log
