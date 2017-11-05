@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import 'ui.css';
+import './ui.css';
 /**
  * 分页组件
  * @param count 总页数
@@ -89,7 +89,7 @@ export default class Pagination extends Component {
         if (null !== next) pages.push(next);
         if (null !== end) pages.push(end);
         return (
-            <section className='ui-pagination'>{pages}</section>
+            <div className='ui-pagination'>{pages}</div>
         );
     }
 }
