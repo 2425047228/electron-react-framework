@@ -1,0 +1,15 @@
+span,div,section,em{margin: 0;padding: 0;}
+input,textarea,select{outline: none;border:none;}a{text-decoration: none;}em{font-style:normal;}
+/* 分页样式 */
+.ui-pagination{
+    width: 100%;padding: 20px 0;
+    display: flex;display: -webkit-flex;
+    align-items: center;justify-content: center;
+}
+.ui-pagination-item,.ui-pagination-chosen{
+    height: 30px;line-height: 30px;
+    font-size: 14px;border-radius: 3px;
+    padding: 0 12px;margin: 0 1px;
+}
+.ui-pagination-item{background: #f5f5f5;border:1px solid #e0e0e0;}
+.ui-pagination-choose{color: red;}
