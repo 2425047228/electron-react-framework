@@ -14,7 +14,7 @@ app.on('ready', () => {
     let electronScreen = electron.screen,    //定义屏幕对象变量
         size = electronScreen.getPrimaryDisplay().workAreaSize;    //获取屏幕大小
     createWindow(
-        'index', 
+        'main', 
         {
             width:size.width,
             height:size.height,
@@ -22,7 +22,7 @@ app.on('ready', () => {
             minHeight:800,
             autoHideMenuBar:true
         },
-        'public/index.html'
+        'public/main.html'
     );
 });
 
