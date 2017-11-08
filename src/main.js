@@ -4,7 +4,6 @@
  */
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import './init.css';
 import './main.css';
 import routes from './routes';
 
@@ -32,7 +31,7 @@ class Main extends Component{
 class Header extends Component{
     constructor(props) {super(props);}
     render() {
-        return (<div className='main-header'>头部</div>);
+        return (<div className='main-header' onClick={() => window.print()}>头部</div>);
     }
 }
 

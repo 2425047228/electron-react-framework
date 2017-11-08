@@ -8,3 +8,4 @@ ul{list-style: none;}
 table{border-collapse:collapse;border-spacing:0}
 ::-webkit-scrollbar{width: 6px;height: 6px;}    /* 滚动条样式 */
 ::-webkit-scrollbar-thumb{border-radius: 10px;background: #e6e8e9;}    /* 滚动条滑块样式 */
+/* css初始化结束 */
