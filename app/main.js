@@ -5,7 +5,8 @@ const electron = require('electron'),
     ipcMain = electron.ipcMain,
     path = require('path'),
     url = require('url');
-let win = {};    //声明窗口对象
+let win = {},    //声明窗口对象
+    winprints = null;
 
 // 部分 API 在 ready 事件触发后才能使用。
 app.on('ready', () => {
@@ -60,6 +61,21 @@ ipcMain.on('toggle-login', () => {
     createWindow('login', { width: 491, height: 351, frame: false, resizable: false }, 'public/login.html');
     win.main.close();
 });
+//静默打印
+ipcMain.on('print-silent', (e, args) => {
+    if (null === winprints) {
+        winprints = new BrowserWindow({show: false});
+        winprints.on('closed', () => { winprints = null; });
+    }
+    winprints.loadURL(url.format({
+        pathname: path.join(__dirname, args),
+        protocol: 'file:',
+        slashes: true
+    }));
+});
+ipcMain.on("print", (event, arg) => {
+    winprints.webContents.print({silent: true, printBackground: true});
+});
 
 //窗口创建函数
 function createWindow(name, windowStyle, uri) {
@@ -77,5 +93,8 @@ function createWindow(name, windowStyle, uri) {
     //打开开发者工具
     win[name].webContents.openDevTools();
     //当window关闭时取消引用
-    win[name].on('closed', () => { win[name] = null; });
+    win[name].on('closed', () => {
+        win[name] = null;
+        if (null !== winprints) {winprints.close();}
+    });
 }
